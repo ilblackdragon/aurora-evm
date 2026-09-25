@@ -30,6 +30,7 @@ scale-info = { version = "2.11", default-features = false, features = ["derive"]
 
 [features]
 default = ["std"]
+privacy = []
 std = [
     "log/std",
     "primitive-types/std",
@@ -54,3 +55,8 @@ tracing = ["environmental"]
 force-debug = []
 create-fixed = []
 print-debug = []
+
+[dev-dependencies]
+hex = "0.4"
+serde_json = "1.0"
+ethabi = "18.0"

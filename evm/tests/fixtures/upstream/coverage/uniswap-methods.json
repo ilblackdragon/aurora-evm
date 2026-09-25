@@ -1,0 +1,632 @@
+[
+  {
+    "contract": "UniswapV2Factory",
+    "method": "allPairs(uint256):(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Factory",
+    "method": "allPairsLength():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Factory",
+    "method": "createPair(address,address):(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Factory",
+    "method": "feeTo():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Factory",
+    "method": "feeToSetter():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Factory",
+    "method": "getPair(address,address):(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Factory",
+    "method": "setFeeTo(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Factory",
+    "method": "setFeeToSetter(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "WETH9",
+    "method": "allowance(address,address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "WETH9",
+    "method": "approve(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "WETH9",
+    "method": "balanceOf(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "WETH9",
+    "method": "decimals():(uint8)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "WETH9",
+    "method": "deposit()",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "WETH9",
+    "method": "name():(string)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "WETH9",
+    "method": "symbol():(string)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "WETH9",
+    "method": "totalSupply():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "WETH9",
+    "method": "transfer(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "WETH9",
+    "method": "transferFrom(address,address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "WETH9",
+    "method": "withdraw(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "WETH():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256):(uint256,uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "addLiquidityETH(address,uint256,uint256,uint256,address,uint256):(uint256,uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "factory():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "getAmountIn(uint256,uint256,uint256):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "getAmountOut(uint256,uint256,uint256):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "getAmountsIn(uint256,address[]):(uint256[])",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "getAmountsOut(uint256,address[]):(uint256[])",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "quote(uint256,uint256,uint256):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "removeLiquidity(address,address,uint256,uint256,uint256,address,uint256):(uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "removeLiquidityETH(address,uint256,uint256,uint256,address,uint256):(uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "removeLiquidityETHSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "removeLiquidityETHWithPermit(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32):(uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "removeLiquidityWithPermit(address,address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32):(uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "swapETHForExactTokens(uint256,address[],address,uint256):(uint256[])",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "swapExactETHForTokens(uint256,address[],address,uint256):(uint256[])",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "swapExactTokensForETH(uint256,uint256,address[],address,uint256):(uint256[])",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "swapExactTokensForETHSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "swapExactTokensForTokens(uint256,uint256,address[],address,uint256):(uint256[])",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "swapTokensForExactETH(uint256,uint256,address[],address,uint256):(uint256[])",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Router02",
+    "method": "swapTokensForExactTokens(uint256,uint256,address[],address,uint256):(uint256[])",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "DOMAIN_SEPARATOR():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "MINIMUM_LIQUIDITY():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "PERMIT_TYPEHASH():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "allowance(address,address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "approve(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "balanceOf(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "burn(address):(uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "decimals():(uint8)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "factory():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "getReserves():(uint112,uint112,uint32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "initialize(address,address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "kLast():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "mint(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "name():(string)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "nonces(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "price0CumulativeLast():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "price1CumulativeLast():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "skim(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "swap(uint256,uint256,address,bytes)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "symbol():(string)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "sync()",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "token0():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "token1():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "totalSupply():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "transfer(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "UniswapV2Pair",
+    "method": "transferFrom(address,address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  }
+]

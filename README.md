@@ -56,3 +56,9 @@ aurora-evm = "3.0"
 ```
 
 ## License: [MIT](LICENSE)
+
+## Experimental privacy policies
+
+The optional `privacy` feature enforces method access and event audiences for
+direct contracts without changing their bytecode. See [the integration guide](evm/PRIVACY.md)
+for the trusted-host requirements, supported scope, and Solidity integration tests.
