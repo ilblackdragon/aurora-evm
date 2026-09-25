@@ -1,0 +1,9 @@
+# Unmodified third-party imports: available to inspect, collapsed in PR diffs.
+evm/tests/fixtures/upstream/aave-core-v3/** linguist-vendored linguist-generated
+evm/tests/fixtures/upstream/uniswap-v2-core/** linguist-vendored linguist-generated
+evm/tests/fixtures/upstream/uniswap-v2-periphery/** linguist-vendored linguist-generated
+
+# Reproducible generated outputs. Keep our Solidity, Rust, scripts and pins visible.
+evm/tests/fixtures/privacy/*.bin linguist-generated
+evm/tests/fixtures/privacy/*.abi.json linguist-generated
+evm/tests/fixtures/upstream/coverage/*.json linguist-generated

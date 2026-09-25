@@ -12,7 +12,8 @@ published Uniswap Pair artifact preserves the init-code hash expected by Router0
 | `@aave/core-v3` | `1.19.3` | https://github.com/aave/aave-v3-core |
 
 `packages.json` pins npm archive integrity. `SHA256SUMS.json` pins every copied
-source, package/license file, and normalized artifact. Preserve the upstream
+source, package/license file, and normalized artifact. Unused nested compiler
+caches and OS metadata from the packages are excluded. Preserve the upstream
 licenses/SPDX headers when redistributing. Re-fetch and verify using Python 3.12+:
 
 ```sh

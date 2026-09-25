@@ -27,7 +27,10 @@ for pin in json.loads((ROOT / 'packages.json').read_text()):
         src = Path(tmp) / 'package'
         dst = ROOT / directory
         dst.mkdir(exist_ok=True)
-        shutil.copytree(src / 'contracts', dst / 'contracts', dirs_exist_ok=True)
+        # npm packages may bundle huge compiler caches inside contracts/.
+        # Keep original sources; executable artifacts are normalized below.
+        shutil.copytree(src / 'contracts', dst / 'contracts', dirs_exist_ok=True,
+                        ignore=shutil.ignore_patterns('artifacts', 'cache', '.DS_Store'))
         for path in [src / 'package.json', *src.glob('LICENSE*')]:
             shutil.copy2(path, dst / path.name)
         paths = (src / 'artifacts' / 'contracts').rglob('*.json') if short == 'core-v3' else (src / 'build').glob('*.json')
