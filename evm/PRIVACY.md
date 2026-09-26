@@ -251,6 +251,89 @@ reads; explorers/indexers need confidential history and event delivery; develope
 need policy manifests, dependency review and upgrade tests. Remaining effort is
 primarily host integration, output-path review and operational hardening.
 
+## Review findings and RPC design decisions
+
+The review of PR #1 identified the following boundaries. The standalone
+[RPC/browser demo](../demos/privacy-rpc/README.md) implements a limited vertical
+slice of this design; the remaining items are not production guarantees.
+
+| Area | Decision / current status |
+| --- | --- |
+| User vs application identity | A user identity alone is too broad for dapps. Read sessions carry contract/selector scopes. `PrivacyConfig::with_call_scope` intersects these with policy admission on every external call, including nested reads. Approved delegate code remains inside its reviewed storage-owner boundary. |
+| Protocol test expectations | The original ABI sweep derives expected visibility from its policy and defaults unrecognized fixture methods to public. It verifies enforcement, not whether the policy is correct. Replace this with an independently reviewed visibility manifest before production use. The demo uses explicit token/forwarder rules. |
+| Simulation | Static queries cannot implement ordinary write-and-discard wallet simulation. A simulation could temporarily acquire access without payment. The demo only returns a conservative gas bound, without execution or success prediction. |
+| Observation channels | Native `BALANCE` remains observable. Tracing can expose internal values even to a signer who cannot directly read them. Restricting RPC getters alone is insufficient; user trace/proof/storage export is denied in the demo. |
+| Account and proxy compatibility | EOA authentication is supported. Smart-account/relayer validation, EIP-7702, precompiles, permits and arbitrary multicall/diamond/upgrade-and-initialize flows need explicit support and tests. |
+| Policy changes and history | Code/policy upgrades may broaden disclosure while sessions remain active. Production sessions need version/revocation rules; historical audiences and current viewing capabilities must both be checked. The demo has fixed policies. |
+
+A wallet should hold its own broad viewing authority and issue a separate,
+short-lived capability for each web app. A capability identifies user, chain/shard,
+RPC audience, application, allowed contracts/methods, event/history scope and expiry.
+It does not authorize spending. Stronger sessions additionally bind an ephemeral
+client public key and sign each request's method, parameters, block reference and
+replay nonce. SIWE supplies an identity-login format; it is not by itself a full
+capability policy. EIP-712 can encode a grant but does not supply replay protection.
+See [SIWE](https://eips.ethereum.org/EIPS/eip-4361) and
+[EIP-712](https://eips.ethereum.org/EIPS/eip-712).
+
+### Per-user RPC URLs
+
+A URL such as `https://rpc.example/rpc/<random-secret>` can authenticate a user
+without signing every read. The secret must be unguessable; an address or username
+in the path is not authentication. Treat the entire URL as a bearer credential,
+store its hash server-side, and attach permissions/expiry/revocation to it.
+
+Use a wallet URL to issue narrower per-user **and per-app** read URLs. Never share
+one full-access user URL with every website. A browser origin restriction helps
+isolate apps but is not proof of possession: someone who steals the URL can use it
+outside the browser and forge `Origin`. This tradeoff is exercised explicitly in
+the demo. A URL plus request signatures is the stronger option when theft/replay
+resistance is required.
+
+Keep secrets out of browser navigation/history, referral headers, shared caches,
+proxy logs, analytics and exception reporting. Use protected transport and provide
+rotation/recovery. The demo uses loopback HTTP and a private local provisioning
+file; production enrollment must authenticate the wallet owner before issuing URLs.
+Transaction submission still verifies an independently signed transaction, its
+chain and nonce. A stolen read URL must never become a spending key.
+
+A provider adapter can keep familiar `request`/subscription interfaces. It must
+clear private caches and subscriptions on account/chain/session changes. Adding a
+custom RPC URL alone does not authenticate an unmodified wallet's internal reads
+or make its simulation behavior safe. See the
+[EIP-1193 provider interface](https://eips.ethereum.org/EIPS/eip-1193).
+
+### Confidential indexing and output authorization
+
+The intended indexer runs inside the trusted boundary. Commit state and protected
+logs atomically, adding block/transaction identity and a stable event position.
+Index recipients as well as emitters/topics so Bob can discover a transfer made
+while he was offline, with no pre-registered viewing key or signature to receive it.
+
+Each event must pass both its participant audience and the app's current grant.
+Access to one transfer does **not** grant access to the rest of its transaction,
+receipt, calldata or trace. Even the sender's trace can reveal other users' data
+read by a trusted protocol. Return an explicit privacy receipt projection; do not
+present filtered logs as a canonical receipt with its original proof/bloom.
+
+Apply authorization before pagination, counts and aggregation. Private caches
+must include the authorization context, policy version and canonical state
+reference; a method-and-parameters cache can leak across users or apps. Opaque
+cursors must bind to session/filter and chain epoch. Derived portfolio tables and
+liquidation feeds need the same authorization as source events.
+
+Subscriptions must enforce expiry/revocation while idle, handle reconnection and
+historical catch-up, and remove reorged events. Current capability revocation does
+not rewrite historical participant audiences or erase information already learned.
+Contract ownership/deployment does not automatically authorize its developer's
+indexer. Service accounts need explicit delegated viewing grants.
+
+The browser suite covers two users in two app origins, nested scope bypass
+attempts, signed transfers, offline receipt discovery, mixed-recipient events,
+filtered pagination, static-query bookkeeping, revocation/expiry, URL rotation,
+and reorg rollback. Durable indexing, TEE deployment, production abuse controls
+and complete wallet interoperability remain host work.
+
 ## Tests
 
 ```sh

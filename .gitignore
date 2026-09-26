@@ -11,3 +11,6 @@ target
 tests.bin
 Cargo.lock
 ethtests/
+
+# The standalone HTTP/browser demo pins its own dependency graph.
+!demos/privacy-rpc/Cargo.lock

@@ -542,7 +542,9 @@ impl<'config, 'precompiles, S: StackState<'config>, P: PrecompileSet>
                 .map(Some)
                 .map_err(|_| denied());
         }
-        if matches!(scheme, crate::CallScheme::CallCode) {
+        if matches!(scheme, crate::CallScheme::CallCode)
+            || !privacy.permits_entry(code_address.0, input)
+        {
             return Err(denied());
         }
         let caller = if let Some(parent) = &self.state.metadata().privacy_frame {

@@ -37,3 +37,7 @@ receiver. These deploy alongside real upstream proxies/protocols in
 `FlashArbitrage.sol` is an ordinary Aave simple-flash-loan receiver that trades
 through two real Uniswap V2 routers and repays before paying profit. Its entry,
 callback, profit getter and event visibility are configured entirely in Rust.
+
+`BatchPayments` in `Attacks.sol` supports the RPC/browser demo's mixed-recipient
+receipt and partial-execution rollback tests. It uses ordinary token allowances
+and has no privacy-specific code.

@@ -7,3 +7,7 @@ evm/tests/fixtures/upstream/uniswap-v2-periphery/** linguist-vendored linguist-g
 evm/tests/fixtures/privacy/*.bin linguist-generated
 evm/tests/fixtures/privacy/*.abi.json linguist-generated
 evm/tests/fixtures/upstream/coverage/*.json linguist-generated
+
+# Standalone demo dependency lockfiles are reproducible tooling output.
+demos/privacy-rpc/Cargo.lock linguist-generated
+demos/privacy-rpc/package-lock.json linguist-generated

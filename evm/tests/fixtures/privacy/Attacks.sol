@@ -71,3 +71,11 @@ contract RewritingProxy {
         assembly { return(add(output,32),mload(output)) }
     }
 }
+
+interface IPaymentToken { function transferFrom(address,address,uint256) external returns(bool); }
+contract BatchPayments {
+    function pay(IPaymentToken token,address first,address second,uint256 a,uint256 b) external {
+        require(token.transferFrom(msg.sender,first,a));
+        require(token.transferFrom(msg.sender,second,b));
+    }
+}

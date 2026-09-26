@@ -60,5 +60,7 @@ aurora-evm = "3.0"
 ## Experimental privacy policies
 
 The optional `privacy` feature enforces method access and event audiences for
-direct contracts without changing their bytecode. See [the integration guide](evm/PRIVACY.md)
-for the trusted-host requirements, supported scope, and Solidity integration tests.
+contracts and approved proxies without changing their bytecode. See
+[the integration guide](evm/PRIVACY.md) for the trust model and supported scope.
+The [RPC/browser demo](demos/privacy-rpc/README.md) runs two users and two web apps
+with scoped private RPC URLs, signed transfers, and participant-filtered indexing.

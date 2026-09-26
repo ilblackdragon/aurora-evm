@@ -418,6 +418,7 @@ pub struct PrivacyConfig {
     pub(crate) policies: BTreeMap<Address, Rc<Policy>>,
     pub(crate) principal: Option<Address>,
     pub(crate) query: bool,
+    call_scope: Option<BTreeMap<Address, BTreeSet<Selector>>>,
 }
 impl PrivacyConfig {
     /// Build a bounded policy snapshot. Missing methods/policies deny access.
@@ -496,6 +497,29 @@ impl PrivacyConfig {
             policies: policies.into_iter().map(|(k, p)| (k, Rc::new(p))).collect(),
             principal,
             query,
+            call_scope: None,
+        })
+    }
+
+    /// Narrow a read session to explicitly approved contract entry points.
+    /// Applied to every external call, including nested calls. Delegate edges
+    /// retain their storage owner's reviewed trust boundary.
+    /// # Errors
+    /// Reject write sessions or oversized scopes. An empty scope denies all calls.
+    pub fn with_call_scope(mut self, scope: BTreeMap<Address, BTreeSet<Selector>>) -> Result<Self> {
+        if !self.query || scope.len() > 4096 || scope.values().any(|v| v.len() > 128) {
+            return Err(Denied);
+        }
+        self.call_scope = Some(scope);
+        Ok(self)
+    }
+
+    pub(crate) fn permits_entry(&self, address: Address, input: &[u8]) -> bool {
+        self.call_scope.as_ref().is_none_or(|scope| {
+            input
+                .get(..4)
+                .and_then(|v| <Selector>::try_from(v).ok())
+                .is_some_and(|selector| scope.get(&address).is_some_and(|v| v.contains(&selector)))
         })
     }
 }
