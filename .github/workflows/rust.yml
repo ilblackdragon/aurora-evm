@@ -20,6 +20,12 @@ jobs:
       - name: Run tests
         run: cargo test --all --verbose
 
+      - name: Privacy policy integration tests
+        run: cargo test -p aurora-evm --features privacy,tracing,create-fixed,with-serde
+
+      - name: Privacy without std
+        run: cargo check -p aurora-evm --no-default-features --features privacy
+
   unit-tests-32-bit:
     runs-on: ubuntu-latest
     steps:

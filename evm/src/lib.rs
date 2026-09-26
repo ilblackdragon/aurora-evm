@@ -50,4 +50,6 @@ pub mod core;
 pub mod executor;
 pub mod gasometer;
 pub mod maybe_borrowed;
+#[cfg(feature = "privacy")]
+pub mod privacy;
 pub mod runtime;

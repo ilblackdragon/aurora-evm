@@ -24,6 +24,8 @@ jobs:
         run: cargo clippy --no-default-features
       - name: Clippy with features
         run: cargo clippy --features tracing,create-fixed,with-serde
+      - name: Clippy privacy policy
+        run: cargo clippy -p aurora-evm --all-targets --features privacy,tracing,create-fixed,with-serde
       - name: Clippy with features for aurora-evm-jsontests
         run: cargo clippy -p aurora-evm-jsontests --features dump-state
 

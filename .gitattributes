@@ -1,0 +1,11 @@
+# Unmodified third-party imports: available to inspect, collapsed in PR diffs.
+evm/tests/fixtures/upstream/aave-core-v3/** linguist-vendored linguist-generated
+evm/tests/fixtures/upstream/uniswap-v2-core/** linguist-vendored linguist-generated
+evm/tests/fixtures/upstream/uniswap-v2-periphery/** linguist-vendored linguist-generated
+
+# Collapse all privacy fixture support files, including maintained Solidity and scripts.
+# This is a review presentation choice; these are not all third-party sources.
+evm/tests/fixtures/privacy/** linguist-vendored linguist-generated
+
+# Reproducible generated ABI coverage manifests.
+evm/tests/fixtures/upstream/coverage/*.json linguist-generated

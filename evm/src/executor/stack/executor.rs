@@ -172,6 +172,10 @@ pub struct StackSubstateMetadata<'config> {
     is_static: bool,
     depth: Option<usize>,
     accessed: Option<Accessed>,
+    #[cfg(feature = "privacy")]
+    privacy_frame: Option<crate::privacy::Frame>,
+    #[cfg(feature = "privacy")]
+    protected_logs: Vec<crate::privacy::ProtectedLog>,
 }
 
 impl<'config> StackSubstateMetadata<'config> {
@@ -187,6 +191,10 @@ impl<'config> StackSubstateMetadata<'config> {
             is_static: false,
             depth: None,
             accessed,
+            #[cfg(feature = "privacy")]
+            privacy_frame: None,
+            #[cfg(feature = "privacy")]
+            protected_logs: Vec::new(),
         }
     }
 
@@ -217,6 +225,8 @@ impl<'config> StackSubstateMetadata<'config> {
                 .append(&mut other_accessed.authority);
         }
 
+        #[cfg(feature = "privacy")]
+        self.protected_logs.extend(other.protected_logs);
         Ok(())
     }
 
@@ -240,6 +250,10 @@ impl<'config> StackSubstateMetadata<'config> {
             is_static: is_static || self.is_static,
             depth: self.depth.map_or(Some(0), |n| Some(n + 1)),
             accessed: self.accessed.as_ref().map(|_| Accessed::default()),
+            #[cfg(feature = "privacy")]
+            privacy_frame: None,
+            #[cfg(feature = "privacy")]
+            protected_logs: Vec::new(),
         }
     }
 
@@ -414,6 +428,10 @@ pub struct StackExecutor<'config, 'precompiles, S, P> {
     config: &'config Config,
     state: S,
     precompile_set: &'precompiles P,
+    #[cfg(feature = "privacy")]
+    privacy: Option<crate::privacy::PrivacyConfig>,
+    #[cfg(feature = "privacy")]
+    privacy_decisions: Vec<crate::privacy::CallDecision>,
 }
 
 impl<'config, 'precompiles, S: StackState<'config>, P: PrecompileSet>
@@ -439,7 +457,138 @@ impl<'config, 'precompiles, S: StackState<'config>, P: PrecompileSet>
             config,
             state,
             precompile_set,
+            #[cfg(feature = "privacy")]
+            privacy: None,
+            #[cfg(feature = "privacy")]
+            privacy_decisions: Vec::new(),
         }
+    }
+
+    /// Construct an executor for a host-authenticated privacy session.
+    #[cfg(feature = "privacy")]
+    pub const fn new_with_privacy(
+        state: S,
+        config: &'config Config,
+        precompile_set: &'precompiles P,
+        privacy: crate::privacy::PrivacyConfig,
+    ) -> Self {
+        Self {
+            config,
+            state,
+            precompile_set,
+            privacy: Some(privacy),
+            privacy_decisions: Vec::new(),
+        }
+    }
+
+    /// Committed confidential logs. Export only through audience authorization.
+    #[cfg(feature = "privacy")]
+    pub fn protected_logs(&self) -> &[crate::privacy::ProtectedLog] {
+        &self.state.metadata().protected_logs
+    }
+
+    /// Confidential diagnostics for the trusted host, including reverted calls.
+    #[cfg(feature = "privacy")]
+    pub fn privacy_decisions(&self) -> &[crate::privacy::CallDecision] {
+        &self.privacy_decisions
+    }
+
+    #[cfg(feature = "privacy")]
+    fn admit_private_call(
+        &mut self,
+        code_address: H160,
+        scheme: crate::CallScheme,
+        input: &[u8],
+        is_static: bool,
+        context: &Context,
+    ) -> Result<Option<crate::privacy::Frame>, ExitReason> {
+        use crate::privacy::{admit_call, CallContext, CallKind, Caller};
+        let denied = || ExitReason::Revert(crate::ExitRevert::Reverted);
+        self.state.metadata_mut().gasometer.record_cost(200)?;
+        // Precompiles and delegated accounts need explicit host bindings.
+        if self.precompile_set.is_precompile(code_address)
+            || self.state.get_authority_target(code_address).is_some()
+        {
+            return Err(denied());
+        }
+        let code = self.state.code(code_address);
+        let hash_cost = u64::try_from(code.len())
+            .ok()
+            .and_then(|n| n.checked_add(31))
+            .and_then(|n| (n / 32).checked_mul(6))
+            .ok_or(ExitError::OutOfGas)?;
+        self.state.metadata_mut().gasometer.record_cost(hash_cost)?;
+        let privacy = self.privacy.as_ref().ok_or_else(denied)?;
+        let actual_hash: [u8; 32] = Keccak256::digest(&code).into();
+        if matches!(scheme, crate::CallScheme::DelegateCall) {
+            let parent = self
+                .state
+                .metadata()
+                .privacy_frame
+                .as_ref()
+                .ok_or_else(denied)?;
+            if context.address.0 != parent.policy.address
+                || context.caller.0 != parent.caller.map_or([0; 20], |c| c.address)
+            {
+                return Err(denied());
+            }
+            return parent
+                .delegate(
+                    code_address.0,
+                    actual_hash,
+                    input,
+                    is_static || self.state.metadata().is_static(),
+                )
+                .map(Some)
+                .map_err(|_| denied());
+        }
+        if matches!(scheme, crate::CallScheme::CallCode)
+            || !privacy.permits_entry(code_address.0, input)
+        {
+            return Err(denied());
+        }
+        let caller = if let Some(parent) = &self.state.metadata().privacy_frame {
+            if context.caller.0 != parent.policy.address {
+                return Err(denied());
+            }
+            Some(Caller {
+                address: parent.policy.address,
+                code_hash: Some(parent.code_hash),
+            })
+        } else {
+            if context.caller.0 != privacy.principal.unwrap_or_default()
+                || !self.state.code(context.caller).is_empty()
+            {
+                return Err(denied());
+            }
+            privacy.principal.map(|address| Caller {
+                address,
+                code_hash: None,
+            })
+        };
+        // An empty CALL to an account with no executable code cannot read
+        // contract storage or emit a log. Authenticate the caller first; never
+        // extend this exception to precompiles, delegated code or calldata.
+        if code.is_empty() && input.is_empty() && context.address == code_address {
+            return Ok(None);
+        }
+        let trusted = CallContext {
+            principal: privacy.principal,
+            caller,
+            storage_address: context.address.0,
+            code_address: code_address.0,
+            code_hash: actual_hash,
+            kind: if is_static {
+                CallKind::StaticCall
+            } else {
+                CallKind::Call
+            },
+            query: privacy.query,
+            is_static: is_static || self.state.metadata().is_static(),
+        };
+        admit_call(privacy.policies.get(&code_address.0), &trusted, input)
+            .map(Some)
+            .map_err(|_| denied())
     }
 
     pub const fn state(&self) -> &S {
@@ -477,6 +626,11 @@ impl<'config, 'precompiles, S: StackState<'config>, P: PrecompileSet>
 
     /// Execute the runtime until it returns.
     pub fn execute(&mut self, runtime: &mut Runtime) -> ExitReason {
+        #[cfg(feature = "privacy")]
+        if self.privacy.is_some() {
+            // Raw runtimes have no admitted/code-bound frame.
+            return crate::ExitRevert::Reverted.into();
+        }
         let mut call_stack: SmallVec<[TaggedRuntime; DEFAULT_CALL_STACK_CAPACITY]> =
             smallvec!(TaggedRuntime {
                 kind: RuntimeKind::Execute,
@@ -774,6 +928,15 @@ impl<'config, 'precompiles, S: StackState<'config>, P: PrecompileSet>
         access_list: Vec<(H160, Vec<H256>)>,
         authorization_list: Vec<Authorization>,
     ) -> (ExitReason, Vec<u8>) {
+        #[cfg(feature = "privacy")]
+        if let Some(privacy) = &self.privacy {
+            if privacy.principal.unwrap_or_default() != caller.0
+                || !authorization_list.is_empty()
+                || (privacy.query && value != U256_ZERO)
+            {
+                return (crate::ExitRevert::Reverted.into(), Vec::new());
+            }
+        }
         event!(TransactCall {
             caller,
             address,
@@ -812,6 +975,7 @@ impl<'config, 'precompiles, S: StackState<'config>, P: PrecompileSet>
         };
 
         match self.call_inner(
+            crate::CallScheme::Call,
             address,
             Some(Transfer {
                 source: caller,
@@ -858,13 +1022,27 @@ impl<'config, 'precompiles, S: StackState<'config>, P: PrecompileSet>
         address: H160,
         data: Vec<u8>,
     ) -> (ExitReason, Vec<u8>) {
+        #[cfg(feature = "privacy")]
+        if self.privacy.is_some() {
+            return (crate::ExitRevert::Reverted.into(), Vec::new());
+        }
         let context = Context {
             caller,
             address,
             apparent_value: U256::zero(),
         };
 
-        match self.call_inner(address, None, data, None, false, false, false, context) {
+        match self.call_inner(
+            crate::CallScheme::Call,
+            address,
+            None,
+            data,
+            None,
+            false,
+            false,
+            false,
+            context,
+        ) {
             Capture::Exit((s, v)) => emit_exit!(s, v),
             Capture::Trap(rt) => {
                 let mut cs: SmallVec<[TaggedRuntime<'_>; DEFAULT_CALL_STACK_CAPACITY]> =
@@ -1116,6 +1294,15 @@ impl<'config, 'precompiles, S: StackState<'config>, P: PrecompileSet>
         target_gas: Option<u64>,
         take_l64: bool,
     ) -> Capture<(ExitReason, Vec<u8>), StackExecutorCreateInterrupt<'static>> {
+        #[cfg(feature = "privacy")]
+        if self.privacy.is_some() {
+            // Constructor policies and factory registration are not implemented.
+            // Immediate CREATE failures must be errors (runtime invariant).
+            return Capture::Exit((
+                ExitError::InvalidCode(crate::Opcode::CREATE).into(),
+                Vec::new(),
+            ));
+        }
         if self.nonce(caller) >= U64_MAX {
             return Capture::Exit((ExitError::MaxNonce.into(), Vec::new()));
         }
@@ -1208,6 +1395,7 @@ impl<'config, 'precompiles, S: StackState<'config>, P: PrecompileSet>
     #[allow(clippy::too_many_arguments, clippy::too_many_lines)]
     fn call_inner(
         &mut self,
+        scheme: crate::CallScheme,
         code_address: H160,
         transfer: Option<Transfer>,
         input: Vec<u8>,
@@ -1217,6 +1405,27 @@ impl<'config, 'precompiles, S: StackState<'config>, P: PrecompileSet>
         take_stipend: bool,
         context: Context,
     ) -> Capture<(ExitReason, Vec<u8>), StackExecutorCallInterrupt<'static>> {
+        #[cfg(feature = "privacy")]
+        let is_static = is_static || self.privacy.as_ref().is_some_and(|p| p.query);
+        #[cfg(not(feature = "privacy"))]
+        let _ = scheme;
+        #[cfg(feature = "privacy")]
+        let privacy_frame = if self.privacy.is_some() {
+            let decision =
+                self.admit_private_call(code_address, scheme, &input, is_static, &context);
+            self.privacy_decisions.push(crate::privacy::CallDecision {
+                storage_address: context.address.0,
+                code_address: code_address.0,
+                selector: input.get(..4).and_then(|v| v.try_into().ok()),
+                admitted: decision.is_ok(),
+            });
+            match decision {
+                Ok(frame) => frame,
+                Err(reason) => return Capture::Exit((reason, Vec::new())),
+            }
+        } else {
+            None
+        };
         event!(Call {
             code_address,
             transfer: &transfer,
@@ -1243,6 +1452,10 @@ impl<'config, 'precompiles, S: StackState<'config>, P: PrecompileSet>
         }
 
         self.enter_substate(gas_limit, is_static);
+        #[cfg(feature = "privacy")]
+        {
+            self.state.metadata_mut().privacy_frame = privacy_frame;
+        }
         self.state.touch(context.address);
 
         if let Some(depth) = self.state.metadata().depth {
@@ -1398,6 +1611,14 @@ impl<'config, 'precompiles, S: StackState<'config>, P: PrecompileSet>
         reason: &ExitReason,
         return_data: Vec<u8>,
     ) -> Vec<u8> {
+        #[cfg(feature = "privacy")]
+        let return_data = if self.privacy.is_some() && !reason.is_succeed() {
+            // Errors may embed private balances. Scrub before returning to any
+            // caller, including a contract that catches and re-exports bytes.
+            Vec::new()
+        } else {
+            return_data
+        };
         log::debug!(target: "evm", "Call execution using address {code_address}: {reason:?}");
         match reason {
             ExitReason::Succeed(_) => {
@@ -1624,6 +1845,27 @@ impl<'config, S: StackState<'config>, P: PrecompileSet> Handler
     }
 
     fn log(&mut self, address: H160, topics: Vec<H256>, data: Vec<u8>) -> Result<(), ExitError> {
+        #[cfg(feature = "privacy")]
+        if self.privacy.is_some() {
+            // Existing LOG opcode gas is charged separately. The bounded rule
+            // evaluator adds a fixed fee; all outcomes use the same fee.
+            self.state.metadata_mut().gasometer.record_cost(200)?;
+            let frame = self
+                .state
+                .metadata()
+                .privacy_frame
+                .as_ref()
+                .ok_or_else(|| ExitError::Other("privacy denied".into()))?;
+            let protected = crate::privacy::classify_log(
+                frame,
+                address.0,
+                topics.into_iter().map(|t| t.0).collect(),
+                data,
+            )
+            .map_err(|_| ExitError::Other("privacy denied".into()))?;
+            self.state.metadata_mut().protected_logs.push(protected);
+            return Ok(());
+        }
         self.state.log(address, topics, data);
         Ok(())
     }
@@ -1704,6 +1946,34 @@ impl<'config, S: StackState<'config>, P: PrecompileSet> Handler
         capture
     }
 
+    fn call_with_scheme(
+        &mut self,
+        scheme: crate::CallScheme,
+        code_address: H160,
+        transfer: Option<Transfer>,
+        input: Vec<u8>,
+        target_gas: Option<u64>,
+        is_static: bool,
+        context: Context,
+    ) -> Capture<(ExitReason, Vec<u8>), Self::CallInterrupt> {
+        let capture = self.call_inner(
+            scheme,
+            code_address,
+            transfer,
+            input,
+            target_gas,
+            is_static,
+            true,
+            true,
+            context,
+        );
+        #[cfg(feature = "tracing")]
+        if let Capture::Exit((ref reason, ref return_value)) = capture {
+            emit_exit!(reason, return_value);
+        }
+        capture
+    }
+
     #[cfg(not(feature = "tracing"))]
     fn call(
         &mut self,
@@ -1715,6 +1985,7 @@ impl<'config, S: StackState<'config>, P: PrecompileSet> Handler
         context: Context,
     ) -> Capture<(ExitReason, Vec<u8>), Self::CallInterrupt> {
         self.call_inner(
+            crate::CallScheme::Call,
             code_address,
             transfer,
             input,
@@ -1737,6 +2008,7 @@ impl<'config, S: StackState<'config>, P: PrecompileSet> Handler
         context: Context,
     ) -> Capture<(ExitReason, Vec<u8>), Self::CallInterrupt> {
         let capture = self.call_inner(
+            crate::CallScheme::Call,
             code_address,
             transfer,
             input,

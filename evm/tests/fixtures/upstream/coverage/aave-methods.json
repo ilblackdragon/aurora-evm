@@ -1,0 +1,2540 @@
+[
+  {
+    "contract": "ACLManager",
+    "method": "ADDRESSES_PROVIDER():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "ASSET_LISTING_ADMIN_ROLE():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "BRIDGE_ROLE():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "DEFAULT_ADMIN_ROLE():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "EMERGENCY_ADMIN_ROLE():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "FLASH_BORROWER_ROLE():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "POOL_ADMIN_ROLE():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "RISK_ADMIN_ROLE():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "addAssetListingAdmin(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "addBridge(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "addEmergencyAdmin(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "addFlashBorrower(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "addPoolAdmin(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "addRiskAdmin(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "getRoleAdmin(bytes32):(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "grantRole(bytes32,address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "hasRole(bytes32,address):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "isAssetListingAdmin(address):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "isBridge(address):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "isEmergencyAdmin(address):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "isFlashBorrower(address):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "isPoolAdmin(address):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "isRiskAdmin(address):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "removeAssetListingAdmin(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "removeBridge(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "removeEmergencyAdmin(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "removeFlashBorrower(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "removePoolAdmin(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "removeRiskAdmin(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "renounceRole(bytes32,address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "revokeRole(bytes32,address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "setRoleAdmin(bytes32,bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ACLManager",
+    "method": "supportsInterface(bytes4):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "ATOKEN_REVISION():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "DOMAIN_SEPARATOR():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "EIP712_REVISION():(bytes)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "PERMIT_TYPEHASH():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "POOL():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "RESERVE_TREASURY_ADDRESS():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "UNDERLYING_ASSET_ADDRESS():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "allowance(address,address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "AToken",
+    "method": "approve(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "balanceOf(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "AToken",
+    "method": "burn(address,address,uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "decimals():(uint8)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "decreaseAllowance(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "getIncentivesController():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "getPreviousIndex(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "AToken",
+    "method": "getScaledUserBalanceAndSupply(address):(uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "AToken",
+    "method": "handleRepayment(address,address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "increaseAllowance(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "initialize(address,address,address,address,uint8,string,string,bytes)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "mint(address,address,uint256,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "mintToTreasury(uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "name():(string)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "nonces(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "AToken",
+    "method": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "rescueTokens(address,address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "scaledBalanceOf(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "AToken",
+    "method": "scaledTotalSupply():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "setIncentivesController(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "symbol():(string)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "totalSupply():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "transfer(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "transferFrom(address,address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "transferOnLiquidation(address,address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AToken",
+    "method": "transferUnderlyingTo(address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "ADDRESSES_PROVIDER():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getATokenTotalSupply(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getAllATokens():((string,address)[])",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getAllReservesTokens():((string,address)[])",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getDebtCeiling(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getDebtCeilingDecimals():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getFlashLoanEnabled(address):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getInterestRateStrategyAddress(address):(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getLiquidationProtocolFee(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getPaused(address):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getReserveCaps(address):(uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getReserveConfigurationData(address):(uint256,uint256,uint256,uint256,uint256,bool,bool,bool,bool,bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getReserveData(address):(uint256,uint256,uint256,uint256,uint256,uint256,uint256,uint256,uint256,uint256,uint256,uint40)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getReserveEModeCategory(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getReserveTokensAddresses(address):(address,address,address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getSiloedBorrowing(address):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getTotalDebt(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getUnbackedMintCap(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "AaveProtocolDataProvider",
+    "method": "getUserReserveData(address,address):(uint256,uint256,uint256,uint256,uint256,uint256,uint256,uint40,bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "DOMAIN_SEPARATOR():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "EIP712_REVISION():(bytes)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "PERMIT_TYPEHASH():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "allowance(address,address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "approve(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "balanceOf(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "decimals():(uint8)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "decreaseAllowance(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "increaseAllowance(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "mint(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "mint(uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "name():(string)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "nonces(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "symbol():(string)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "totalSupply():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "transfer(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "MintableERC20",
+    "method": "transferFrom(address,address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "ADDRESSES_PROVIDER():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "BRIDGE_PROTOCOL_FEE():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "FLASHLOAN_PREMIUM_TOTAL():(uint128)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "FLASHLOAN_PREMIUM_TO_PROTOCOL():(uint128)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "MAX_NUMBER_RESERVES():(uint16)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "MAX_STABLE_RATE_BORROW_SIZE_PERCENT():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "POOL_REVISION():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "backUnbacked(address,uint256,uint256):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "borrow(address,uint256,uint256,uint16,address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "configureEModeCategory(uint8,(uint16,uint16,uint16,address,string))",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "deposit(address,uint256,address,uint16)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "dropReserve(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "finalizeTransfer(address,address,address,uint256,uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "flashLoan(address,address[],uint256[],uint256[],address,bytes,uint16)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "flashLoanSimple(address,address,uint256,bytes,uint16)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "getConfiguration(address):((uint256))",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "getEModeCategoryData(uint8):((uint16,uint16,uint16,address,string))",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "getReserveAddressById(uint16):(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "getReserveData(address):(((uint256),uint128,uint128,uint128,uint128,uint128,uint40,uint16,address,address,address,address,uint128,uint128,uint128))",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "getReserveNormalizedIncome(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "getReserveNormalizedVariableDebt(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "getReservesList():(address[])",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "getUserAccountData(address):(uint256,uint256,uint256,uint256,uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "Pool",
+    "method": "getUserConfiguration(address):((uint256))",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "Pool",
+    "method": "getUserEMode(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "Pool",
+    "method": "initReserve(address,address,address,address,address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "initialize(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "liquidationCall(address,address,address,uint256,bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "mintToTreasury(address[])",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "mintUnbacked(address,uint256,address,uint16)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "rebalanceStableBorrowRate(address,address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "repay(address,uint256,uint256,address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "repayWithATokens(address,uint256,uint256):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "repayWithPermit(address,uint256,uint256,address,uint256,uint8,bytes32,bytes32):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "rescueTokens(address,address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "resetIsolationModeTotalDebt(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "setConfiguration(address,(uint256))",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "setReserveInterestRateStrategyAddress(address,address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "setUserEMode(uint8)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "setUserUseReserveAsCollateral(address,bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "supply(address,uint256,address,uint16)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "supplyWithPermit(address,uint256,address,uint16,uint256,uint8,bytes32,bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "swapBorrowRateMode(address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "updateBridgeProtocolFee(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "updateFlashloanPremiums(uint128,uint128)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "Pool",
+    "method": "withdraw(address,uint256,address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "getACLAdmin():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "getACLManager():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "getAddress(bytes32):(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "getMarketId():(string)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "getPool():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "getPoolConfigurator():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "getPoolDataProvider():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "getPriceOracle():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "getPriceOracleSentinel():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "owner():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "renounceOwnership()",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "setACLAdmin(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "setACLManager(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "setAddress(bytes32,address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "setAddressAsProxy(bytes32,address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "setMarketId(string)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "setPoolConfiguratorImpl(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "setPoolDataProvider(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "setPoolImpl(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "setPriceOracle(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "setPriceOracleSentinel(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "method": "transferOwnership(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "CONFIGURATOR_REVISION():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "configureReserveAsCollateral(address,uint256,uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "dropReserve(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "initReserves((address,address,address,uint8,address,address,address,address,string,string,string,string,string,string,bytes)[])",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "initialize(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setAssetEModeCategory(address,uint8)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setBorrowCap(address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setBorrowableInIsolation(address,bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setDebtCeiling(address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setEModeCategory(uint8,uint16,uint16,uint16,address,string)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setLiquidationProtocolFee(address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setPoolPause(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setReserveActive(address,bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setReserveBorrowing(address,bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setReserveFactor(address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setReserveFlashLoaning(address,bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setReserveFreeze(address,bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setReserveInterestRateStrategyAddress(address,address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setReservePause(address,bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setReserveStableRateBorrowing(address,bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setSiloedBorrowing(address,bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setSupplyCap(address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "setUnbackedMintCap(address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "updateAToken((address,address,address,string,string,address,bytes))",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "updateBridgeProtocolFee(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "updateFlashloanPremiumToProtocol(uint128)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "updateFlashloanPremiumTotal(uint128)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "updateStableDebtToken((address,address,string,string,address,bytes))",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PoolConfigurator",
+    "method": "updateVariableDebtToken((address,address,string,string,address,bytes))",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PriceOracle",
+    "method": "getAssetPrice(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PriceOracle",
+    "method": "getEthUsdPrice():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PriceOracle",
+    "method": "setAssetPrice(address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "PriceOracle",
+    "method": "setEthUsdPrice(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "DEBT_TOKEN_REVISION():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "DELEGATION_WITH_SIG_TYPEHASH():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "DOMAIN_SEPARATOR():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "EIP712_REVISION():(bytes)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "POOL():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "UNDERLYING_ASSET_ADDRESS():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "allowance(address,address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "approve(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "approveDelegation(address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "balanceOf(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "borrowAllowance(address,address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "burn(address,uint256):(uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "decimals():(uint8)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "decreaseAllowance(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "delegationWithSig(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "getAverageStableRate():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "getIncentivesController():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "getSupplyData():(uint256,uint256,uint256,uint40)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "getTotalSupplyAndAvgRate():(uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "getTotalSupplyLastUpdated():(uint40)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "getUserLastUpdated(address):(uint40)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "getUserStableRate(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "increaseAllowance(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "initialize(address,address,address,uint8,string,string,bytes)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "mint(address,address,uint256,uint256):(bool,uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "name():(string)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "nonces(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "principalBalanceOf(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "setIncentivesController(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "symbol():(string)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "totalSupply():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "transfer(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "StableDebtToken",
+    "method": "transferFrom(address,address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "DEBT_TOKEN_REVISION():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "DELEGATION_WITH_SIG_TYPEHASH():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "DOMAIN_SEPARATOR():(bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "EIP712_REVISION():(bytes)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "POOL():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "UNDERLYING_ASSET_ADDRESS():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "allowance(address,address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "approve(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "approveDelegation(address,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "balanceOf(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "borrowAllowance(address,address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "burn(address,uint256,uint256):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "decimals():(uint8)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "decreaseAllowance(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "delegationWithSig(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "getIncentivesController():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "getPreviousIndex(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "getScaledUserBalanceAndSupply(address):(uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "increaseAllowance(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "initialize(address,address,address,uint8,string,string,bytes)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "mint(address,address,uint256,uint256):(bool,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "name():(string)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "nonces(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "scaledBalanceOf(address):(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 1,
+    "visibility": "user-or-approved-contract",
+    "wrong_identity": "denied"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "scaledTotalSupply():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "setIncentivesController(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "symbol():(string)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "totalSupply():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "transfer(address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "VariableDebtToken",
+    "method": "transferFrom(address,address,uint256):(bool)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 0,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ZeroReserveInterestRateStrategy",
+    "method": "ADDRESSES_PROVIDER():(address)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ZeroReserveInterestRateStrategy",
+    "method": "MAX_EXCESS_STABLE_TO_TOTAL_DEBT_RATIO():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ZeroReserveInterestRateStrategy",
+    "method": "MAX_EXCESS_USAGE_RATIO():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ZeroReserveInterestRateStrategy",
+    "method": "OPTIMAL_STABLE_TO_TOTAL_DEBT_RATIO():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ZeroReserveInterestRateStrategy",
+    "method": "OPTIMAL_USAGE_RATIO():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ZeroReserveInterestRateStrategy",
+    "method": "calculateInterestRates((uint256,uint256,uint256,uint256,uint256,uint256,uint256,address,address)):(uint256,uint256,uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ZeroReserveInterestRateStrategy",
+    "method": "getBaseStableBorrowRate():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ZeroReserveInterestRateStrategy",
+    "method": "getBaseVariableBorrowRate():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ZeroReserveInterestRateStrategy",
+    "method": "getMaxVariableBorrowRate():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ZeroReserveInterestRateStrategy",
+    "method": "getStableRateExcessOffset():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ZeroReserveInterestRateStrategy",
+    "method": "getStableRateSlope1():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ZeroReserveInterestRateStrategy",
+    "method": "getStableRateSlope2():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ZeroReserveInterestRateStrategy",
+    "method": "getVariableRateSlope1():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  },
+  {
+    "contract": "ZeroReserveInterestRateStrategy",
+    "method": "getVariableRateSlope2():(uint256)",
+    "positive_identity_admission": true,
+    "runtime_cases": 2,
+    "successful_runtime_cases": 2,
+    "visibility": "public-admission; original authorization applies",
+    "wrong_identity": "public admission"
+  }
+]

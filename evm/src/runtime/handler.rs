@@ -124,6 +124,30 @@ pub trait Handler {
         is_static: bool,
         context: Context,
     ) -> Capture<(ExitReason, Vec<u8>), Self::CallInterrupt>;
+
+    /// Dispatch a call while preserving its opcode scheme for host policy checks.
+    /// Existing handlers retain their behavior through this default implementation.
+    #[allow(clippy::too_many_arguments)]
+    fn call_with_scheme(
+        &mut self,
+        scheme: crate::CallScheme,
+        code_address: H160,
+        transfer: Option<Transfer>,
+        input: Vec<u8>,
+        target_gas: Option<u64>,
+        is_static: bool,
+        context: Context,
+    ) -> Capture<(ExitReason, Vec<u8>), Self::CallInterrupt> {
+        let _ = scheme;
+        self.call(
+            code_address,
+            transfer,
+            input,
+            target_gas,
+            is_static,
+            context,
+        )
+    }
     /// Feed in call feedback.
     ///
     /// # Errors

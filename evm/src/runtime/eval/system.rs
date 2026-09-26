@@ -550,7 +550,8 @@ pub fn call<H: Handler>(runtime: &mut Runtime, scheme: CallScheme, handler: &mut
         None
     };
 
-    match handler.call(
+    match handler.call_with_scheme(
+        scheme,
         to.into(),
         transfer,
         input,
