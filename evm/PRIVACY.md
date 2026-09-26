@@ -254,7 +254,7 @@ primarily host integration, output-path review and operational hardening.
 ## Review findings and RPC design decisions
 
 The review of PR #1 identified the following boundaries. The standalone
-[RPC/browser demo](../demos/privacy-rpc/README.md) implements a limited vertical
+[RPC/browser demo](https://github.com/ilblackdragon/aurora-privacy-rpc-demo) implements a limited vertical
 slice of this design; the remaining items are not production guarantees.
 
 | Area | Decision / current status |

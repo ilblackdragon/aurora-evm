@@ -3,11 +3,9 @@ evm/tests/fixtures/upstream/aave-core-v3/** linguist-vendored linguist-generated
 evm/tests/fixtures/upstream/uniswap-v2-core/** linguist-vendored linguist-generated
 evm/tests/fixtures/upstream/uniswap-v2-periphery/** linguist-vendored linguist-generated
 
-# Reproducible generated outputs. Keep our Solidity, Rust, scripts and pins visible.
-evm/tests/fixtures/privacy/*.bin linguist-generated
-evm/tests/fixtures/privacy/*.abi.json linguist-generated
-evm/tests/fixtures/upstream/coverage/*.json linguist-generated
+# Collapse all privacy fixture support files, including maintained Solidity and scripts.
+# This is a review presentation choice; these are not all third-party sources.
+evm/tests/fixtures/privacy/** linguist-vendored linguist-generated
 
-# Standalone demo dependency lockfiles are reproducible tooling output.
-demos/privacy-rpc/Cargo.lock linguist-generated
-demos/privacy-rpc/package-lock.json linguist-generated
+# Reproducible generated ABI coverage manifests.
+evm/tests/fixtures/upstream/coverage/*.json linguist-generated
